@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Adam Kareem Device Recovery</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:700px;margin:40px auto;padding:20px}
+.box{border:1px solid #999;padding:20px;border-radius:8px}
+input{padding:8px;font-size:18px}
+button{padding:8px 12px;font-size:16px}
+#content{display:none;margin-top:20px}
+</style>
+</head>
+<body>
+<h2>ST. HELENA DIGITAL FORENSICS</h2>
+<div class="box">
+<p><strong>Device:</strong> Adam Kareem</p>
+<p><strong>Status:</strong> LOCKED</p>
+<p>Hint: Last Important Values</p>
+<input id="code" placeholder="Enter Passcode">
+<button onclick="unlock()">Unlock</button>
+<div id="msg"></div>
+
+<div id="content">
+<h3>Recovered Notes</h3>
+<p>Meeting with lawyer Monday.<br>
+Divorce paperwork finalized.<br>
+Need to tell Maya tonight.</p>
+
+<h3>Insurance Change Confirmation</h3>
+<p>Previous Beneficiary: Maya Kareem<br>
+New Beneficiary: Amina Kareem</p>
+
+<h3>Draft Message</h3>
+<p>Maya,<br>
+I should have told you sooner.<br>
+I don't want this to become a fight.</p>
+
+<h3>Missed Calls</h3>
+<p>01:31 AM<br>01:37 AM<br>01:42 AM</p>
+</div>
+</div>
+
+<script>
+function unlock(){
+  const c=document.getElementById('code').value.trim();
+  if(c==="18152"){
+    document.getElementById('msg').innerHTML="<p><b>ACCESS GRANTED</b></p>";
+    document.getElementById('content').style.display='block';
+  } else {
+    document.getElementById('msg').innerHTML="<p>ACCESS DENIED</p>";
+  }
+}
+</script>
+</body>
+</html>
